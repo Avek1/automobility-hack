@@ -9,3 +9,7 @@ Contributors
 - Natcha Kaovorakarn
 
 - Sam Radkoosha
+
+- Baltasar Lizano
+
+- Nick Friend
