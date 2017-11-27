@@ -2,12 +2,6 @@
 
 Contributors
 
-
-~ Daniel Castro
-
-- Daniel Castro
-- Natcha Kaovorakarn
-
 ~ Daniel Castro
 
 ~ Andy Park
