@@ -9,5 +9,3 @@ Contributors
 - Natcha Kaovorakarn
 
 - Sam Radkoosha
-
-- LA Automoblity Hackathon
