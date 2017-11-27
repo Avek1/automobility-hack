@@ -1,5 +1,6 @@
 # automobility-hack
 
-Contributers 
+Contributors
 
-~ Daniel Castro
+- Daniel Castro
+- Natcha Kaovorakarn
