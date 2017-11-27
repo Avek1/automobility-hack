@@ -10,4 +10,4 @@ Contributors
 
 - Sam Radkoosha
 
-- Honda hack
+- LA Automoblity Hackathon
