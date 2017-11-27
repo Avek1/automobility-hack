@@ -2,10 +2,10 @@
 
 Contributors
 
-~ Daniel Castro
+- Daniel Castro
 
-~ Andy Park
+- Andy Park
 
 - Natcha Kaovorakarn
 
-~ Sam Radkoosha
+- Sam Radkoosha
