@@ -100,6 +100,8 @@
     <Content Include="dashboard\css\plugins.css" />
     <Content Include="dashboard\css\smart-forms.css" />
     <Content Include="dashboard\css\style.css" />
+    <Content Include="dashboard\css\fonts\fontawesome-webfont.svg" />
+    <Content Include="dashboard\css\fonts\ionicons.svg" />
     <Content Include="dashboard\js\angular.min.js" />
     <Content Include="dashboard\js\assan.custom.js" />
     <Content Include="dashboard\js\dashboard.custom.js" />
@@ -111,6 +113,7 @@
     <Content Include="DropNGo\VehicleInfo.html" />
     <Content Include="FastLaneLogo.JPG" />
     <Content Include="App\fastLaneApp.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Index.css" />
     <Content Include="Saftey\carInfoController.js" />
@@ -123,6 +126,7 @@
     <Content Include="Routes\fastLane.routes.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-ui-router-1.0.3.js" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Web.config" />
@@ -141,6 +145,21 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="dashboard\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="dashboard\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="dashboard\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="dashboard\css\fonts\fontawesome-webfont.woff2" />
+    <Content Include="dashboard\css\fonts\FontAwesome.otf" />
+    <Content Include="dashboard\css\fonts\ionicons.eot" />
+    <Content Include="dashboard\css\fonts\ionicons.ttf" />
+    <Content Include="dashboard\css\fonts\ionicons.woff" />
+    <Content Include="dashboard\css\fonts\linearicons.eot" />
+    <Content Include="dashboard\css\fonts\linearicons.ttf" />
+    <Content Include="dashboard\css\fonts\linearicons.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
