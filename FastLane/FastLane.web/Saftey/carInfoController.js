@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('fastLane')
+    angular.module('fastLaneApp')
         .controller('carInfoController', carInfoController)
 
     carInfoController.$inject = ['getCarService']
