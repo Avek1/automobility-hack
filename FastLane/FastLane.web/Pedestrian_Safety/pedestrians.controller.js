@@ -11,26 +11,33 @@
         vm.$scope = $scope;
         vm.$onInit = _onInit;
         vm.pedestrianService = PedestrianService;
-        vm.auth = _auth;
-        vm.authSuccess = _authSuccess;
-        vm.authError = _authError;
+        vm.getInjury = _getInjury;
+        vm.injurySuccess = _injurySuccess;
+        vm.injuryError = _injuryError;
 
         function _onInit() {
             console.log("Pedestrians say hello");
-            vm.auth();
         }
 
-        function _auth() {
-            vm.pedestrianService.authorize()
-                .then(vm.authSuccess).catch(vm.authError);
+        function _getInjury() {
+            vm.pedestrianService.getInjury()
+                .then(vm.injurySuccess).catch(vm.injuryError);
         }
 
-        function _authSuccess(res) {
-            console.log("Auth success: " + res);
+        function _injurySuccess(res) {
+            console.log("injury success: " + res.data[0]);
+
+            console.log(Object.getOwnPropertyNames(res));
+
+            for (var key in res) {
+                if (res.hasOwnProperty("data")) {
+                    console.log(key + " -> " + res[key]);
+                }
+            }
         }
 
-        function _authError(err) {
-            console.log("Auth error: " + err);
+        function _injuryError(err) {
+            console.log("injury error: " + err);
         }
     }
 })();
