@@ -1,26 +1,4 @@
-﻿//(function () {
-//    'use strict'
-//    var app = angular.module('fastLaneApp')
-//    app.config(_configureStates);
-//    _configureStates.$inject = ['$stateProvider']
-
-//    function _configureStates($stateProvider) {
-//        $stateProvider
-//            .state({
-//                name: 'vehicleInfo',
-//                component: 'vehicleInfoScreen',
-//                url: '/vehicleInfo'
-//            })
-//    }
-
-//    app.component('vehicleInfoScreen', {
-//        templateUrl: 'Safety/safety.html',
-//        controller: 'carInfoController',
-//        controllerAs: 'cc'
-//    })
-//})();
-
-(function () {
+﻿(function () {
     'use strict'
     angular.module('fastLaneApp')
         .controller('carInfoController', carInfoController)
