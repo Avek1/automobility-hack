@@ -109,8 +109,9 @@
     <Content Include="dashboard\js\jquery-ui.min.js" />
     <Content Include="dashboard\js\moment.min.js" />
     <Content Include="dashboard\js\plugins.js" />
-    <Content Include="DropNGo\VehicleInfo.css" />
-    <Content Include="DropNGo\VehicleInfo.html" />
+    <Content Include="DropNGo\DropNGo.js" />
+    <Content Include="DropNGo\DropNGo.css" />
+    <Content Include="DropNGo\DropNGo.html" />
     <Content Include="FastLaneLogo.JPG" />
     <Content Include="App\fastLaneApp.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
