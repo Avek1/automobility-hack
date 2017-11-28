@@ -81,10 +81,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\app.js" />
-    <Content Include="app\navAngular.html" />
-    <Content Include="app\controllers\navController.js" />
-    <Content Include="app\services\railService.js" />
+    <Content Include="app\fastLaneApp.js" />
+    <Content Include="Content\angular-material.css" />
+    <Content Include="Content\angular-material.layout-attributes.css" />
+    <Content Include="Content\angular-material.layout-attributes.min.css" />
+    <Content Include="Content\angular-material.layouts.css" />
+    <Content Include="Content\angular-material.layouts.ie_fixes.css" />
+    <Content Include="Content\angular-material.layouts.min.css" />
+    <Content Include="Content\angular-material.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="dashboard\css\animate.css" />
     <Content Include="dashboard\css\font-awesome.css" />
     <Content Include="dashboard\css\fonts.css" />
@@ -92,8 +101,6 @@
     <Content Include="dashboard\css\plugins.css" />
     <Content Include="dashboard\css\smart-forms.css" />
     <Content Include="dashboard\css\style.css" />
-    <Content Include="dashboard\fonts\fontawesome-webfont.svg" />
-    <Content Include="dashboard\fonts\ionicons.svg" />
     <Content Include="dashboard\js\angular.min.js" />
     <Content Include="dashboard\js\assan.custom.js" />
     <Content Include="dashboard\js\dashboard.custom.js" />
@@ -104,10 +111,23 @@
     <Content Include="DropNGo\VehicleInfo.css" />
     <Content Include="DropNGo\VehicleInfo.html" />
     <Content Include="Global.asax" />
-    <Content Include="app\views\nav.html" />
     <Content Include="Scripts\angular-toastr.tpls.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Index.html" />
+    <Content Include="Pedestrian_Safety\pedestrian.view.html" />
+    <Content Include="Pedestrian_Safety\pedestrians.controller.js" />
+    <Content Include="Pedestrian_Safety\pedestrians.service.js" />
+    <Content Include="Routes\fastLane.routes.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-ui-router.js" />
+    <Content Include="Scripts\angular-ui-router.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="transit\routeController.js" />
+    <Content Include="transit\route.html" />
+    <Content Include="transit\transit.html" />
+    <Content Include="transit\transitController.js" />
+    <Content Include="transit\transitService.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -119,17 +139,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="dashboard\fonts\fontawesome-webfont.eot" />
-    <Content Include="dashboard\fonts\fontawesome-webfont.ttf" />
-    <Content Include="dashboard\fonts\fontawesome-webfont.woff" />
-    <Content Include="dashboard\fonts\fontawesome-webfont.woff2" />
-    <Content Include="dashboard\fonts\FontAwesome.otf" />
-    <Content Include="dashboard\fonts\ionicons.eot" />
-    <Content Include="dashboard\fonts\ionicons.ttf" />
-    <Content Include="dashboard\fonts\ionicons.woff" />
-    <Content Include="dashboard\fonts\linearicons.eot" />
-    <Content Include="dashboard\fonts\linearicons.ttf" />
-    <Content Include="dashboard\fonts\linearicons.woff" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -141,6 +155,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

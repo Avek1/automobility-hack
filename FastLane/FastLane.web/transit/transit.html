@@ -1,0 +1,66 @@
+﻿
+
+<style>
+    #departure {
+        /*display: block;*/
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    #arrival {
+        /*display: block;*/
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    .searchTerm {
+        border: 3px solid #00B4CC;
+    }
+
+    .searchArrival {
+        border: 3px solid #00b33c;
+    }
+
+    .searchButton {
+        position: absolute;
+        height: 36px;
+        border: 1px solid #00B4CC;
+        background: #00B4CC;
+        text-align: center;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    #express {
+        background-color: #9400D3;
+    }
+</style>
+
+<nav class="nav">
+    <a class="nav-link active" href="#">Blue Line</a>
+    <a class="nav-link" href="#">Red Line</a>
+    <a class="nav-link" href="#">Purple Line</a>
+    <a class="nav-link" href="#">Gold Line</a>
+</nav>
+
+<div class="search">
+    <input type="text" class="searchTerm" ng-model="transitCtrl.searchTerm" placeholder="Departure">
+    <input type="text" class="searchArrival" ng-model="transitCtrl.searchArrival" placeholder="Arrival">
+    <button type="button" class="searchButton" ui-sref="route">
+        Search
+    </button>
+</div>
+<p></p>
+<div class="container">
+    <ul class="list-group">
+        <li class="btn list-group-item" data-ng-repeat="station in transitCtrl.blueLine">
+            {{station.name}}<button type="button" class="btn btn-primary" id="departure" ng-click="transitCtrl.departBtnClicked()">D</button>
+            <button type="button" class="btn btn-success" id="arrival" ng-click="transitCtrl.arriveBtnClicked()">A</button>
+        </li>
+
+    </ul>
+</div>
