@@ -33,10 +33,10 @@
             function getZipCode(response) {
                 var long = response.data.longitude;
                 var lat = response.data.latitude;
-                var googleApi; //ask for api key, do not push api key to github
+                
                 return $http({
                     method: 'GET',
-                    url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + long + '&key=' + googleApi
+                    url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + long + '&key='  //ask for api key, do not push api key to github
                 })
             }
 
