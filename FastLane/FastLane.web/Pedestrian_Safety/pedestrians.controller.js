@@ -14,14 +14,14 @@
         vm.getInjury = _getInjury;
         vm.injurySuccess = _injurySuccess;
         vm.injuryError = _injuryError;
-        vm.sortArray = _sortArray;
+        vm.checkVicinity = _checkVicinity;
         vm.injuryArray = [];
         vm.highInjuryArray = [];
         vm.sortedArray = [];
-        vm.checkVicinity = _checkVicinity;
+        vm.countArray = [];
 
         function _onInit() {
-            console.log("Pedestrians say hello");
+            console.log("Pedestrians say, 'hello'");
             vm.getInjury();
         }
 
@@ -32,20 +32,29 @@
 
         function _injurySuccess(res) {
             for (var i = 0; i < res.data.features.length; i++) {
-                vm.injuryArray.push(res.data.features[i].geometry.coordinates.length);
+                var tempId = res.data.features[i].properties.OBJECTID,
+                    tempName = res.data.features[i].properties.STNAME,
+                    tempCoord = res.data.features[i].geometry.coordinates[0],
+                    tempCount = res.data.features[i].geometry.coordinates.length,
+                    tempObj = {
+                        id: tempId,
+                        name: tempName,
+                        coord: tempCoord,
+                        count: tempCount
+                    }
+                console.log(tempObj);
+
+                vm.injuryArray.push(tempObj);
+                vm.countArray.push(tempCount);
                 if (res.data.features[i].geometry.coordinates.length > 31) {
                     vm.highInjuryArray.push(res.data.features[i].geometry.coordinates);
                 }
             }
-            vm.sortedArray = vm.sortArray(vm.injuryArray);
+            vm.sortedArray = vm.injuryArray.sort(function (a, b) { return b - a });
         }
 
         function _injuryError(err) {
             console.log("injury error: " + err);
-        }
-
-        function _sortArray(arr) {
-            return arr.sort(function (a, b) { return b - a });
         }
 
         function _checkVicinity(long, lat, num) {

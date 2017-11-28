@@ -9,7 +9,6 @@
     function PedestrianService($http, $q) {
         return {
             getInjury: _getInjury,
-            //checkVicinity: _checkVicinity
         }
 
         function _getInjury() {
@@ -25,7 +24,5 @@
         function _injuryError(err) {
             return $q.reject(err);
         }
-
-        //function _checkVicinity
     }
 })();
