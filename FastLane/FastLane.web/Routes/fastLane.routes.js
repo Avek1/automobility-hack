@@ -19,20 +19,6 @@
                 templateUrl: '/Pedestrian_Safety/pedestrian.view.html',
                 title: 'Pedestrian Safety',
                 controller: 'pedestrianController'
-            })
-            .state({
-                name: 'transit',
-                url: '/transit',
-                templateUrl: '/transit/transit.html',
-                title: 'Transit',
-                controller: 'transitController as transitCtrl'
-            })
-           .state({
-            name: 'route',
-            url: '/route',
-            templateUrl: '/transit/route.html',
-            title: 'Route',
-            controller: 'routeController as routeCtrl'
-        });
+            });
     }
 })();

@@ -1,0 +1,113 @@
+﻿<div class="content" ng-controller="carInfoController as cc">
+    <div class="container">
+        <div class="page-title pt30 pb30">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2 class="mb0">Vehicle Status</h2>
+                </div>
+                <div class="col-sm-3">
+                    <div class="mb30 bg-success">
+                        <div class="widget-content">
+                            <h4 class="text-white text-center">Excellent</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="mb30 bg-warning">
+                        <div class="widget-content">
+                            <h4 class="text-white text-center">Warning</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="mb30 bg-danger">
+                        <div class="widget-content">
+                            <h4 class="text-white text-center">Danger</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="cc.location" class="row">
+            <div class="col-lg-12">
+                <div class="mb30 bg-success">
+                    <div class="widget-content">
+                        <h4 class="text-white text-center">Location: {{cc.location}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="cc.carInfoArray.isLocked.isLocked == true" class="row">
+            <div class="col-lg-12">
+                <div class="mb30 bg-success">
+                    <div class="widget-content">
+                        <h4 class="text-white text-center">Locked: {{cc.carInfoArray.isLocked.isLocked}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="cc.carInfoArray.isLocked.isLocked == false" class="row">
+            <div class="col-lg-12">
+                <div class="mb30 bg-danger">
+                    <div class="widget-content">
+                        <h4 class="text-white text-center">Locked: {{cc.carInfoArray.isLocked.isLocked}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="cc.odometer" class="row" >
+            <div class="col-md-6">
+                <div class="mb30 bg-success">
+                    <div class="widget-content">
+                        <h4 class="text-white text-center">Miles: {{cc.odometer}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div ng-if="cc.carInfoArray.fuel.percentRemaining >= .50" class="col-md-6">
+                <div class=" mb30 bg-success">
+                    <div class="widget-content">
+                        <h4 class="text-white text-center">Fuel: {{cc.fuel}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="cc.carInfoArray.fuel.percentRemaining < .50 && cc.carInfoArray.fuel.percentRemaining > .25" class="col-md-6">
+                <div class="mb30 bg-warning">
+                    <div class="widget-content">
+                        <h4 class="text-white text-center">Fuel: {{cc.fuel}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="cc.carInfoArray.fuel.percentRemaining < .25" class="col-md-6">
+                <div class="mb30 bg-danger">
+                    <div class="widget-content">
+                        <h4 class="text-white text-center">Fuel: {{cc.fuel}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div ng-repeat="tire in cc.carInfoArray.tires" class="col-md-6 col-lg-3 col-sm-12 ">
+                <div ng-if="tire.pressure > 200" class="mb30 bg-success">
+                    <div class="widget-content">
+                        <h4 class="text-white text-center">Tire: {{tire.location}}</h4>
+                        <h4 class="text-white text-center">Air Pressure: {{tire.pressure}}</h4>
+                    </div>
+                </div>
+                <div ng-if="tire.pressure <= 200 && tire.pressure >= 190" class="mb30 bg-warning">
+                    <div class="widget-content">
+                        <h4 class="text-white text-center">Tire: {{tire.location}}</h4>
+                        <h4 class="text-white text-center">Air Pressure: {{tire.pressure}}</h4>
+                    </div>
+                </div>
+                <div ng-if="tire.pressure < 190" class="mb30 bg-danger">
+                    <div class="widget-content">
+                        <h4 class="text-white text-center">Tire: {{tire.location}}</h4>
+                        <h4 class="text-white text-center">Air Pressure: {{tire.pressure}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="fastLaneApp">
+<head>
+    <meta charset="utf-8">
+    <title>Honda Hackathon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="/Content/angular-material.min.css" rel="stylesheet" />
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
+</head>
+<body>
+    <button class="btn btn-primary" ui-sref="pedestrians">Pedestrians</button>
+    <div ui-view></div>
+
+    <script src="/Scripts/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="/Scripts/angular-route.min.js"></script>
+    <script src="/App/fastLaneApp.js"></script>
+    <script src="/Routes/fastLane.routes.js"></script>
+    <script src="/Pedestrian_Safety/pedestrians.controller.js"></script>
+    <script src="/Pedestrian_Safety/pedestrians.service.js"></script>
+</body>
+</html>

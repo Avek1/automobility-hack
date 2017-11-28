@@ -17,7 +17,7 @@
 
         function _onInit() {
             console.log("Pedestrians say hello");
-
+            vm.auth();
         }
 
         function _auth() {
