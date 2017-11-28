@@ -10,7 +10,7 @@
                 method: 'GET',
                 url: 'https://api.smartcar.com/v1.0/vehicles/3563ad5c-d92b-4152-ac57-c720bdbd9fb6/tires',
                 headers: {
-                    Authorization: "bearer 883c0cfb-c094-46e8-aa30-481afa25c026"
+                    Authorization: "Bearer 3154297b-8db2-459f-9f18-8e2b757bbca5"
                 }
             }).then(resp => resp.data.tires);
 
@@ -18,7 +18,7 @@
                 method: 'GET',
                 url: 'https://api.smartcar.com/v1.0/vehicles/3563ad5c-d92b-4152-ac57-c720bdbd9fb6/fuel',
                 headers: {
-                    Authorization: "bearer 883c0cfb-c094-46e8-aa30-481afa25c026"
+                    Authorization: "Bearer 3154297b-8db2-459f-9f18-8e2b757bbca5"
                 }
             }).then(resp => resp.data);
 
@@ -26,15 +26,25 @@
                 method: 'GET',
                 url: 'https://api.smartcar.com/v1.0/vehicles/3563ad5c-d92b-4152-ac57-c720bdbd9fb6/location',
                 headers: {
-                    Authorization: "bearer 883c0cfb-c094-46e8-aa30-481afa25c026"
+                    Authorization: "Bearer 3154297b-8db2-459f-9f18-8e2b757bbca5"
                 }
-            }).then(resp => resp.data);
+            }).then(getZipCode);
+
+            function getZipCode(response) {
+                var long = response.data.longitude;
+                var lat = response.data.latitude;
+                var googleApi; //ask for api key, do not push api key to github
+                return $http({
+                    method: 'GET',
+                    url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + long + '&key=' + googleApi
+                })
+            }
 
             var odometer = $http({
                 method: 'GET',
                 url: 'https://api.smartcar.com/v1.0/vehicles/3563ad5c-d92b-4152-ac57-c720bdbd9fb6/odometer',
                 headers: {
-                    Authorization: "bearer 883c0cfb-c094-46e8-aa30-481afa25c026"
+                    Authorization: "Bearer 3154297b-8db2-459f-9f18-8e2b757bbca5"
                 }
             }).then(resp => resp.data);
 
@@ -42,7 +52,7 @@
                 method: 'GET',
                 url: 'https://api.smartcar.com/v1.0/vehicles/3563ad5c-d92b-4152-ac57-c720bdbd9fb6/security',
                 headers: {
-                    Authorization: "bearer 883c0cfb-c094-46e8-aa30-481afa25c026"
+                    Authorization: "Bearer 3154297b-8db2-459f-9f18-8e2b757bbca5"
                 }
             }).then(resp => resp.data);
 
