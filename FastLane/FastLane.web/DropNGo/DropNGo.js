@@ -1,14 +1,14 @@
 ﻿(function () {
-    'use strict'
+    'use strict';
 
     var app = angular.module('fastLaneApp');
 
     app.config(configure);
 
-    configure.$inject = ['stateProvider'];
+    configure.$inject = ['$stateProvider'];
 
-    function configure($stateProider) {
-        $stateProider.state({
+    function configure($stateProvider) {
+        $stateProvider.state({
             name: 'dropNGo',
             component: 'dropNGo',
             url: '/dropngo'
@@ -20,7 +20,7 @@
         controller: 'dropNGoController as vm'
     })
 
-});
+})();
 
 (function () {
     'use strict';
@@ -32,10 +32,6 @@
     function dropNGoController($state)
     {
         var vm = this;
-        vm.dropNGo = _dropNGo;
     }
 
-    function _dropNGo() {
-        $state.go('dropNGo');
-    }
-});
+})();
