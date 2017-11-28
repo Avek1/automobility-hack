@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('fastLane')
+    angular.module('fastLaneApp')
         .service('getCarService', getCarService)
     getCarService.$inject = ['$http', '$q']
 
