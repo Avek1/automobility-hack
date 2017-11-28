@@ -80,7 +80,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dashboard\css\animate.css" />
+    <Content Include="dashboard\css\font-awesome.css" />
+    <Content Include="dashboard\css\fonts.css" />
+    <Content Include="dashboard\css\ionicons.css" />
+    <Content Include="dashboard\css\plugins.css" />
+    <Content Include="dashboard\css\smart-forms.css" />
+    <Content Include="dashboard\css\style.css" />
+    <Content Include="dashboard\fonts\fontawesome-webfont.svg" />
+    <Content Include="dashboard\fonts\ionicons.svg" />
+    <Content Include="dashboard\js\angular.min.js" />
+    <Content Include="dashboard\js\assan.custom.js" />
+    <Content Include="dashboard\js\dashboard.custom.js" />
+    <Content Include="dashboard\js\jquery-3.1.1.min.js" />
+    <Content Include="dashboard\js\jquery-ui.min.js" />
+    <Content Include="dashboard\js\moment.min.js" />
+    <Content Include="dashboard\js\plugins.js" />
+    <Content Include="DropNGo\VehicleInfo.css" />
+    <Content Include="DropNGo\VehicleInfo.html" />
     <Content Include="Global.asax" />
+    <Content Include="Index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -92,6 +111,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="dashboard\fonts\fontawesome-webfont.eot" />
+    <Content Include="dashboard\fonts\fontawesome-webfont.ttf" />
+    <Content Include="dashboard\fonts\fontawesome-webfont.woff" />
+    <Content Include="dashboard\fonts\fontawesome-webfont.woff2" />
+    <Content Include="dashboard\fonts\FontAwesome.otf" />
+    <Content Include="dashboard\fonts\ionicons.eot" />
+    <Content Include="dashboard\fonts\ionicons.ttf" />
+    <Content Include="dashboard\fonts\ionicons.woff" />
+    <Content Include="dashboard\fonts\linearicons.eot" />
+    <Content Include="dashboard\fonts\linearicons.ttf" />
+    <Content Include="dashboard\fonts\linearicons.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
