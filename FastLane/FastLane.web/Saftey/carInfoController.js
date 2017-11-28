@@ -26,12 +26,12 @@
 })();
 
 (function () {
-    var app = angular.module('FastLaneApp')
+    var app = angular.module('fastLaneApp')
     app.config(_configureStates)
 
     _configureStates.$inject = ['$stateProvider']
 
-    function _configureStates() {
+    function _configureStates($stateProvider) {
         $stateProvider
             .state({
                 name: 'vehicleInfo',
