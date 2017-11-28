@@ -42,7 +42,6 @@
                         coord: tempCoord,
                         count: tempCount
                     }
-                console.log(tempObj);
 
                 vm.injuryArray.push(tempObj);
                 vm.countArray.push(tempCount);
@@ -61,9 +60,9 @@
             var tempArray = [];
             for (var i = 0; i < vm.highInjuryArray.length; i++) {
                 for (var t = 0; t < vm.highInjuryArray[i].length; t++) {
-                    var long1 = Math.abs(vm.highInjuryArray[i][t][0]) - Math.abs(long);
-                    var lat1 = vm.highInjuryArray[i][t][1] - lat;
-                    var sum = Math.abs(long1) + Math.abs(lat1);
+                    var long1 = Math.abs(vm.highInjuryArray[i][t][0]) - Math.abs(long),
+                        lat1 = vm.highInjuryArray[i][t][1] - lat,
+                        sum = Math.abs(long1) + Math.abs(lat1);
                     tempArray.push(sum);
                 }
             }

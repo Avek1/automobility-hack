@@ -19,6 +19,20 @@
                 templateUrl: '/Pedestrian_Safety/pedestrian.view.html',
                 title: 'Pedestrian Safety',
                 controller: 'pedestrianController'
+            })
+            .state({
+                name: 'dropNGo',
+                //component: 'dropNGo',
+                url: '/dropngo',
+                templateUrl: 'DropNGo/DropNGo.html',
+                controller: 'dropNGoController as vm'
+            })
+            .state({
+                name: 'vehicleInfo',
+                //component: 'vehicleInfoScreen',
+                url: '/vehicleInfo',
+                templateUrl: 'Safety/safety.html',
+                controller: 'carInfoController as cc'
             });
     }
 })();

@@ -1,26 +1,26 @@
-﻿(function () {
-    'use strict';
+﻿//(function () {
+//    'use strict';
 
-    var app = angular.module('fastLaneApp');
+//    var app = angular.module('fastLaneApp');
 
-    app.config(configure);
+//    app.config(configure);
 
-    configure.$inject = ['$stateProvider'];
+//    configure.$inject = ['$stateProvider'];
 
-    function configure($stateProvider) {
-        $stateProvider.state({
-            name: 'dropNGo',
-            component: 'dropNGo',
-            url: '/dropngo'
-        });
-    }
+//    function configure($stateProvider) {
+//        $stateProvider.state({
+//            name: 'dropNGo',
+//            component: 'dropNGo',
+//            url: '/dropngo'
+//        });
+//    }
 
-    app.component('dropNGo', {
-        templateUrl: 'DropNGo/DropNGo.html',
-        controller: 'dropNGoController as vm'
-    })
+//    app.component('dropNGo', {
+//        templateUrl: 'DropNGo/DropNGo.html',
+//        controller: 'dropNGoController as vm'
+//    })
 
-})();
+//})();
 
 (function () {
     'use strict';

@@ -1,24 +1,24 @@
-﻿(function () {
-    'use strict'
-    var app = angular.module('fastLaneApp')
-    app.config(_configureStates);
-    _configureStates.$inject = ['$stateProvider']
+﻿//(function () {
+//    'use strict'
+//    var app = angular.module('fastLaneApp')
+//    app.config(_configureStates);
+//    _configureStates.$inject = ['$stateProvider']
 
-    function _configureStates($stateProvider) {
-        $stateProvider
-            .state({
-                name: 'vehicleInfo',
-                component: 'vehicleInfoScreen',
-                url: '/vehicleInfo'
-            })
-    }
+//    function _configureStates($stateProvider) {
+//        $stateProvider
+//            .state({
+//                name: 'vehicleInfo',
+//                component: 'vehicleInfoScreen',
+//                url: '/vehicleInfo'
+//            })
+//    }
 
-    app.component('vehicleInfoScreen', {
-        templateUrl: 'Safety/safety.html',
-        controller: 'carInfoController',
-        controllerAs: 'cc'
-    })
-})();
+//    app.component('vehicleInfoScreen', {
+//        templateUrl: 'Safety/safety.html',
+//        controller: 'carInfoController',
+//        controllerAs: 'cc'
+//    })
+//})();
 
 (function () {
     'use strict'
