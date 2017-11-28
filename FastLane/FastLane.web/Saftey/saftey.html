@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../dashboard/css/plugins.css" rel="stylesheet" />
+    <link href="../dashboard/css/style.css" rel="stylesheet" />
+</head>
+<body ng-app="fastLane">
+    <div ng-controller="carInfoController as sc">
+        <button ng-click="sc.tireBtn()" class="btn btn-group btn-rounded btn-primary">Tires</button>
+        <div ng-repeat="display in sc.carInfoArray.tires">
+            <div>Tire: {{display.location}}</div>
+            <div>Air Pressure: {{display.pressure}}</div>
+        </div>
+            <div ng-if="sc.carInfoArray.fuel.range">Fuel: {{sc.carInfoArray.fuel.range}}</div>
+        <div ng-if="sc.carInfoArray.location.latitude">Latitude: {{sc.carInfoArray.location.latitude}} </div>
+        <div ng-if="sc.carInfoArray.location.longitude">Longitude: {{sc.carInfoArray.location.longitude}}</div>
+    </div>
+    <script src="../dashboard/js/jquery-3.1.1.min.js"></script>
+    <script src="../dashboard/js/angular.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            angular.module('fastLane', [])
+        })();
+
+        (function () {
+            angular.module('fastLane')
+                .controller('carInfoController', carInfoController)
+
+            carInfoController.$inject = ['getCarService']
+
+            function carInfoController(getCarService) {
+                var vm = this;
+                vm.carInfoArray = []
+                //vm.$onInit = onInit
+                vm.tireBtn = _tireBtn
+
+                function _tireBtn() {
+                    getCarService.getTireInfo().then(display)
+                }
+
+                //function onInit() {
+                //    getCarService.getTireInfo().then(display)
+                //}
+
+                function display(response) {
+                    console.log(response)
+                    vm.carInfoArray = response
+                    console.log(vm.carInfoArray.tires[0].location)
+                }
+            }
+        })();
+
+        (function () {
+            angular.module('fastLane')
+                .service('getCarService', getCarService)
+            getCarService.$inject = ['$http', '$q']
+
+            function getCarService($http, $q) {
+                this.getTireInfo = function () {
+                    var tires = $http({
+                        method: 'GET',
+                        url: 'https://api.smartcar.com/v1.0/vehicles/3563ad5c-d92b-4152-ac57-c720bdbd9fb6/tires',
+                        headers: {
+                            Authorization: "bearer a7f1354b-f259-4f62-b915-af439c4d4284"
+                        }
+                    }).then(resp => resp.data.tires);
+
+                    var fuel = $http({
+                        method: 'GET',
+                        url: 'https://api.smartcar.com/v1.0/vehicles/3563ad5c-d92b-4152-ac57-c720bdbd9fb6/fuel',
+                        headers: {
+                            Authorization: "bearer a7f1354b-f259-4f62-b915-af439c4d4284"
+                        }
+                    }).then(resp => resp.data);
+
+                    var location = $http({
+                        method: 'GET',
+                        url: 'https://api.smartcar.com/v1.0/vehicles/3563ad5c-d92b-4152-ac57-c720bdbd9fb6/location',
+                        headers: {
+                            Authorization: "bearer a7f1354b-f259-4f62-b915-af439c4d4284"
+                        }
+                    }).then(resp => resp.data);
+
+                    var location = $http({
+                        method: 'GET',
+                        url: 'https://api.smartcar.com/v1.0/vehicles/3563ad5c-d92b-4152-ac57-c720bdbd9fb6/location',
+                        headers: {
+                            Authorization: "bearer a7f1354b-f259-4f62-b915-af439c4d4284"
+                        }
+                    }).then(resp => resp.data);
+
+                    return $q.all({ tires, fuel, location });
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
