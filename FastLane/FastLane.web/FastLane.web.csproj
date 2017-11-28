@@ -99,6 +99,8 @@
     <Content Include="DropNGo\VehicleInfo.css" />
     <Content Include="DropNGo\VehicleInfo.html" />
     <Content Include="Global.asax" />
+    <Content Include="Saftey\carInfoController.js" />
+    <Content Include="Saftey\getCarService.js" />
     <Content Include="Saftey\saftey.html" />
     <Content Include="Index.html" />
     <Content Include="Web.config" />
