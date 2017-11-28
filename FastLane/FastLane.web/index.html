@@ -7,6 +7,7 @@
     <link href="/dashboard/css/plugins.css" rel="stylesheet" />
     <link href="dashboard/css/fonts.css" rel="stylesheet" />
     <link href="/dashboard/css/style.css" rel="stylesheet" />
+    <link href="Pedestrian_Safety/pedestrian.styles.css" rel="stylesheet" />
 
 </head>
 <body class="layout-verticle">
@@ -14,6 +15,7 @@
         <nav id="sidebar" class="sidebar-nav light-sidebar">
             <div class="slimScrollDiv" style="position:relative; overflow:hidden; width:auto; height:546px;">
                 <div class="sidebar-inner content-scroll" style="overflow:hidden; width:auto;height:546px;">
+
                     <div class="logo-header"></div>
                     <ul class="metismenu" id="menu">
                         <li class="nav-heading">
@@ -26,13 +28,17 @@
                                 <span ui-sref="vehicleInfo" class="nav-text">Vehicle Info</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <span ui-sref="pedestrians" class="nav-text">High Injury</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <main class="main-content">
             <header class="header">
-                <div class="container">
+                <div class="toggleBtn">
                     <div class="navbar navbar-expand-lg ">
                         <ul class="navbar-nav">
                             <li class="nav-item">
@@ -44,7 +50,10 @@
                     </div>
                 </div>
             </header>
-            <ui-view></ui-view>
+
+        <main class="main-content">
+
+            <div ui-view></div>
         </main>
     </div>
 
