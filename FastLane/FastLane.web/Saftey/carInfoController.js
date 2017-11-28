@@ -21,7 +21,28 @@
         function display(response) {
             console.log(response)
             vm.carInfoArray = response
-            console.log(vm.carInfoArray.tires[0].location)
         }
     }
+})();
+
+(function () {
+    var app = angular.module('FastLaneApp')
+    app.config(_configureStates)
+
+    _configureStates.$inject = ['$stateProvider']
+
+    function _configureStates() {
+        $stateProvider
+            .state({
+                name: 'vehicleInfo',
+                component: 'vehicleInfoScreen',
+                url: '/vehicleInfo'
+            })
+    }
+
+    app.component('vehicleInfoScreen', {
+        templateUrl: 'Saftey/saftey.html',
+        controller: 'carInfoController',
+        controllerAs: 'sc'
+    })
 })();
