@@ -81,57 +81,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dashboard\css\animate.css" />
+    <Content Include="dashboard\css\font-awesome.css" />
+    <Content Include="dashboard\css\fonts.css" />
+    <Content Include="dashboard\css\ionicons.css" />
+    <Content Include="dashboard\css\plugins.css" />
+    <Content Include="dashboard\css\smart-forms.css" />
+    <Content Include="dashboard\css\style.css" />
+    <Content Include="dashboard\fonts\fontawesome-webfont.svg" />
+    <Content Include="dashboard\fonts\ionicons.svg" />
+    <Content Include="dashboard\js\angular.min.js" />
+    <Content Include="dashboard\js\assan.custom.js" />
+    <Content Include="dashboard\js\dashboard.custom.js" />
+    <Content Include="dashboard\js\jquery-3.1.1.min.js" />
+    <Content Include="dashboard\js\jquery-ui.min.js" />
+    <Content Include="dashboard\js\moment.min.js" />
+    <Content Include="dashboard\js\plugins.js" />
+    <Content Include="DropNGo\VehicleInfo.css" />
+    <Content Include="DropNGo\VehicleInfo.html" />
     <Content Include="App\fastLaneApp.js" />
-    <Content Include="Content\angular-material.css" />
-    <Content Include="Content\angular-material.layout-attributes.css" />
-    <Content Include="Content\angular-material.layout-attributes.min.css" />
-    <Content Include="Content\angular-material.layouts.css" />
-    <Content Include="Content\angular-material.layouts.ie_fixes.css" />
-    <Content Include="Content\angular-material.layouts.min.css" />
-    <Content Include="Content\angular-material.min.css" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\ui-bootstrap-csp.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+
     <Content Include="Global.asax" />
+    <Content Include="Index.html" />
     <Content Include="Pedestrian_Safety\pedestrian.view.html" />
     <Content Include="Pedestrian_Safety\pedestrians.controller.js" />
     <Content Include="Pedestrian_Safety\pedestrians.service.js" />
     <Content Include="index.html" />
     <Content Include="Routes\fastLane.routes.js" />
-    <Content Include="Scripts\angular-animate.js" />
-    <Content Include="Scripts\angular-animate.min.js" />
-    <Content Include="Scripts\angular-aria.js" />
-    <Content Include="Scripts\angular-aria.min.js" />
-    <Content Include="Scripts\angular-material-mocks.js" />
-    <Content Include="Scripts\angular-material.js" />
-    <Content Include="Scripts\angular-material.min.js" />
-    <Content Include="Scripts\angular-mocks.js" />
-    <Content Include="Scripts\angular-route.js" />
-    <Content Include="Scripts\angular-route.min.js" />
-    <Content Include="Scripts\angular-ui-router.js" />
-    <Content Include="Scripts\angular-ui-router.min.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
+
+  
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -143,11 +121,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Scripts\angular-route.min.js.map" />
-    <Content Include="Scripts\angular-animate.min.js.map" />
-    <Content Include="Scripts\angular-aria.min.js.map" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="dashboard\fonts\fontawesome-webfont.eot" />
+    <Content Include="dashboard\fonts\fontawesome-webfont.ttf" />
+    <Content Include="dashboard\fonts\fontawesome-webfont.woff" />
+    <Content Include="dashboard\fonts\fontawesome-webfont.woff2" />
+    <Content Include="dashboard\fonts\FontAwesome.otf" />
+    <Content Include="dashboard\fonts\ionicons.eot" />
+    <Content Include="dashboard\fonts\ionicons.ttf" />
+    <Content Include="dashboard\fonts\ionicons.woff" />
+    <Content Include="dashboard\fonts\linearicons.eot" />
+    <Content Include="dashboard\fonts\linearicons.ttf" />
+    <Content Include="dashboard\fonts\linearicons.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
