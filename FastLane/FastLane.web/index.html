@@ -56,30 +56,31 @@
             </header>
 
         <main class="main-content">
-
-            <div ui-view></div>
+            
+            <div ui-view>
+                <div class="LA"></div>
+            </div>
         </main>
     </div>
+    
 
     <script src="dashboard/js/jquery-3.1.1.min.js"></script>
     <script src="dashboard/js/angular.min.js"></script>
     <script src="dashboard/js/plugins.js"></script>
     <script src="dashboard/js/assan.custom.js"></script>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
     <script src="/Scripts/angular-route.min.js"></script>
     <script src="/App/fastLaneApp.js"></script>
     <script src="/Routes/fastLane.routes.js"></script>
     <script src="/Pedestrian_Safety/pedestrians.controller.js"></script>
     <script src="/Pedestrian_Safety/pedestrians.service.js"></script>
-    <script src="Saftey/carInfoController.js"></script>
-    <script src="Saftey/getCarService.js"></script>
+    <script src="Safety/carInfoController.js"></script>
+    <script src="Safety/getCarService.js"></script>
     <script src="DropNGo/DropNGo.js"></script>
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         (function () {
             angular.module('fastLaneApp', ['ui.router'])
         })();
-    </script>
+    </script>-->
 </body>
 </html>
