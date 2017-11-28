@@ -100,16 +100,13 @@
     <Content Include="DropNGo\VehicleInfo.css" />
     <Content Include="DropNGo\VehicleInfo.html" />
     <Content Include="App\fastLaneApp.js" />
-
     <Content Include="Global.asax" />
-    <Content Include="Index.html" />
+    <Content Include="Index1.html" />
     <Content Include="Pedestrian_Safety\pedestrian.view.html" />
     <Content Include="Pedestrian_Safety\pedestrians.controller.js" />
     <Content Include="Pedestrian_Safety\pedestrians.service.js" />
     <Content Include="index.html" />
     <Content Include="Routes\fastLane.routes.js" />
-
-  
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +140,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
