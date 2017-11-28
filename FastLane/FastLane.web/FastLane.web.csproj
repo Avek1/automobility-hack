@@ -98,6 +98,7 @@
     <Content Include="dashboard\js\plugins.js" />
     <Content Include="DropNGo\VehicleInfo.css" />
     <Content Include="DropNGo\VehicleInfo.html" />
+    <Content Include="FastLaneLogo.JPG" />
     <Content Include="Global.asax" />
     <Content Include="Index.css" />
     <Content Include="Index.html" />
