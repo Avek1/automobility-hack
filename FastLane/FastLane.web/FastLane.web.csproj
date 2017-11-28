@@ -140,6 +140,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="dashboard\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="dashboard\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="dashboard\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="dashboard\css\fonts\fontawesome-webfont.woff2" />
+    <Content Include="dashboard\css\fonts\FontAwesome.otf" />
+    <Content Include="dashboard\css\fonts\ionicons.eot" />
+    <Content Include="dashboard\css\fonts\ionicons.ttf" />
+    <Content Include="dashboard\css\fonts\ionicons.woff" />
+    <Content Include="dashboard\css\fonts\linearicons.eot" />
+    <Content Include="dashboard\css\fonts\linearicons.ttf" />
+    <Content Include="dashboard\css\fonts\linearicons.woff" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />

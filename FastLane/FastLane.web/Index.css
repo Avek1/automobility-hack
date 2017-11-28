@@ -64,5 +64,11 @@
 }
 
 .sidebarLogo {
-    width: 95px;
+    width: 140px;
+    height: 50px;
 }
+
+.logo-header {
+    padding: 20px;
+}
+
