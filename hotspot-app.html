@@ -70,6 +70,9 @@
       <input type="radio" name="type" id="changemode-walking" checked="checked">
       <label for="changemode-walking">Walking</label>
 
+      <input type="radio" name="type" id="changemode-bicycling">
+      <label for="changemode-bicycling">Bicycling</label>
+
       <input type="radio" name="type" id="changemode-transit">
       <label for="changemode-transit">Transit</label>
 
@@ -115,6 +118,7 @@
             destinationInput, {placeIdOnly: true});
 
         this.setupClickListener('changemode-walking', 'WALKING');
+        this.setupClickListener('changemode-bicycling', 'BICYCLING');
         this.setupClickListener('changemode-transit', 'TRANSIT');
         this.setupClickListener('changemode-driving', 'DRIVING');
 
