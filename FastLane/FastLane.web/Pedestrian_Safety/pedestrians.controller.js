@@ -14,9 +14,15 @@
         vm.getInjury = _getInjury;
         vm.injurySuccess = _injurySuccess;
         vm.injuryError = _injuryError;
+        vm.sortArray = _sortArray;
+        vm.injuryArray = [];
+        vm.highInjuryArray = [];
+        vm.sortedArray = [];
+        vm.checkVicinity = _checkVicinity;
 
         function _onInit() {
             console.log("Pedestrians say hello");
+            vm.getInjury();
         }
 
         function _getInjury() {
@@ -25,19 +31,37 @@
         }
 
         function _injurySuccess(res) {
-            console.log("injury success: " + res.data[0]);
-
-            console.log(Object.getOwnPropertyNames(res));
-
-            for (var key in res) {
-                if (res.hasOwnProperty("data")) {
-                    console.log(key + " -> " + res[key]);
+            for (var i = 0; i < res.data.features.length; i++) {
+                vm.injuryArray.push(res.data.features[i].geometry.coordinates.length);
+                if (res.data.features[i].geometry.coordinates.length > 31) {
+                    vm.highInjuryArray.push(res.data.features[i].geometry.coordinates);
                 }
             }
+            vm.sortedArray = vm.sortArray(vm.injuryArray);
         }
 
         function _injuryError(err) {
             console.log("injury error: " + err);
+        }
+
+        function _sortArray(arr) {
+            return arr.sort(function (a, b) { return b - a });
+        }
+
+        function _checkVicinity(long, lat) {
+            var tempArray = [];
+            for (var i = 0; i < vm.highInjuryArray.length; i++) {
+                for (var t = 0; t < vm.highInjuryArray[i].length; t++) {
+                    var long1 = Math.abs(vm.highInjuryArray[i][t][0]) - Math.abs(long);
+                    var lat1 = vm.highInjuryArray[i][t][1] - lat;
+                    var sum = Math.abs(long1) + Math.abs(lat1);
+                    tempArray.push(sum);
+                }
+            }
+            tempArray.sort(function (a, b) { return a - b });
+            tempArray.splice(5);
+            
+            return tempArray;
         }
     }
 })();
