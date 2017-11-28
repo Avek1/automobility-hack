@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hotspot</title>
+    <!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .container {
+            padding-top: 10px;
+        }
+
+        .radio-group {
+            background-color: aqua;
+            outline: #00FF00 solid thick;
+
+        }
+        #map {
+            height: 100%;
+        }
+        /* .radio-input{
+            margin: 2px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group row">
+                <div class="col-sm-6 col-md-6 radio-input">
+                    <input class="form-control " id="ex1" type="text" placeholder="Enter an origin location">
+                </div>
+                <div class="col-sm-6 col-md-6 radio-input">
+                    <input class="form-control " id="ex2" type="text" placeholder="Enter a destination location">
+                </div>
+            </div>
+        </form>
+        <form>
+            <div class="form-group row">
+                <div class="col-xs-3 col-md-3 radio-group panel">
+                    <label class="radio-inline">
+                        <input type="radio" name="type" id="" checked="checked">Walking
+                    </label>
+                </div>
+                <div class="col-xs-3 col-md-3 radio-group panel">
+                    <label class="radio-inline">
+                        <input type="radio" name="type" id="">Bicycling
+                    </label>
+                </div>
+                <div class="col-xs-3 col-md-3 radio-group panel">
+                    <label class="radio-inline">
+                        <input type="radio" name="type" id="">Transit
+                    </label>
+                </div>
+                <div class="col-xs-3 col-md-3 radio-group panel">
+                    <label class="radio-inline">
+                        <input type="radio" name="type" id="">Driving
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="map"></div>
+    <script>
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                mapTypeControl: false,
+                center: { lat: 34.052235, lng: -118.243683 },
+                zoom: 13
+            });
+
+            new AutocompleteDirectionsHandler(map);
+        }
+
+        /**
+         * @constructor
+        */
+        function AutocompleteDirectionsHandler(map) {
+            this.map = map;
+            this.originPlaceId = null;
+            this.destinationPlaceId = null;
+            this.travelMode = 'WALKING';
+            var originInput = document.getElementById('origin-input');
+            var destinationInput = document.getElementById('destination-input');
+            var modeSelector = document.getElementById('mode-selector');
+            this.directionsService = new google.maps.DirectionsService;
+            this.directionsDisplay = new google.maps.DirectionsRenderer;
+            this.directionsDisplay.setMap(map);
+
+            var originAutocomplete = new google.maps.places.Autocomplete(
+                originInput, { placeIdOnly: true });
+            var destinationAutocomplete = new google.maps.places.Autocomplete(
+                destinationInput, { placeIdOnly: true });
+
+            this.setupClickListener('changemode-walking', 'WALKING');
+            this.setupClickListener('changemode-bicycling', 'BICYCLING');
+            this.setupClickListener('changemode-transit', 'TRANSIT');
+            this.setupClickListener('changemode-driving', 'DRIVING');
+
+            this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
+            this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
+
+            this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
+            this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
+            this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
+        }
+
+        // Sets a listener on a radio button to change the filter type on Places
+        // Autocomplete.
+        AutocompleteDirectionsHandler.prototype.setupClickListener = function (id, mode) {
+            var radioButton = document.getElementById(id);
+            var me = this;
+            radioButton.addEventListener('click', function () {
+                me.travelMode = mode;
+                me.route();
+            });
+        };
+
+        AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function (autocomplete, mode) {
+            var me = this;
+            autocomplete.bindTo('bounds', this.map);
+            autocomplete.addListener('place_changed', function () {
+                var place = autocomplete.getPlace();
+                if (!place.place_id) {
+                    window.alert("Please select an option from the dropdown list.");
+                    return;
+                }
+                if (mode === 'ORIG') {
+                    me.originPlaceId = place.place_id;
+                } else {
+                    me.destinationPlaceId = place.place_id;
+                }
+                me.route();
+            });
+
+        };
+
+        AutocompleteDirectionsHandler.prototype.route = function () {
+            if (!this.originPlaceId || !this.destinationPlaceId) {
+                return;
+            }
+            var me = this;
+
+            this.directionsService.route({
+                origin: { 'placeId': this.originPlaceId },
+                destination: { 'placeId': this.destinationPlaceId },
+                travelMode: this.travelMode
+            }, function (response, status) {
+                if (status === 'OK') {
+                    me.directionsDisplay.setDirections(response);
+                } else {
+                    window.alert('Directions request failed due to ' + status);
+                }
+            });
+        };
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEXjYvK3d8Dasdyz2HN3gy81FJk6XvlYI&libraries=places&callback=initMap"
+        async defer></script>
+
+</body>
+
+</html>
