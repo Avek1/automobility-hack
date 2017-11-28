@@ -109,8 +109,10 @@
     <Content Include="dashboard\js\plugins.js" />
     <Content Include="DropNGo\VehicleInfo.css" />
     <Content Include="DropNGo\VehicleInfo.html" />
+    <Content Include="FastLaneLogo.JPG" />
     <Content Include="App\fastLaneApp.js" />
     <Content Include="Global.asax" />
+    <Content Include="Index.css" />
     <Content Include="Saftey\carInfoController.js" />
     <Content Include="Saftey\getCarService.js" />
     <Content Include="Saftey\saftey.html" />
