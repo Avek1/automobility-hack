@@ -48,7 +48,7 @@
             return arr.sort(function (a, b) { return b - a });
         }
 
-        function _checkVicinity(long, lat) {
+        function _checkVicinity(long, lat, num) {
             var tempArray = [];
             for (var i = 0; i < vm.highInjuryArray.length; i++) {
                 for (var t = 0; t < vm.highInjuryArray[i].length; t++) {
@@ -59,7 +59,7 @@
                 }
             }
             tempArray.sort(function (a, b) { return a - b });
-            tempArray.splice(5);
+            tempArray.splice(num);
             
             return tempArray;
         }
