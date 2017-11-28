@@ -3,29 +3,33 @@
 <head>
     <meta charset="utf-8" />
     <title>Fast Lane</title>
-    <meta name="viewport" content="width=device-width" intital-scale="1.0" />
-    <link href="/dashboard/css/plugins.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="Index.css" rel="stylesheet" />
+    <link href="dashboard/css/plugins.css" rel="stylesheet" />
     <link href="dashboard/css/fonts.css" rel="stylesheet" />
     <link href="/dashboard/css/style.css" rel="stylesheet" />
     <link href="Pedestrian_Safety/pedestrian.styles.css" rel="stylesheet" />
 
 </head>
-<body class="layout-verticle">
-    <div class="page-wrapper">
-        <nav id="sidebar" class="sidebar-nav light-sidebar">
-            <div class="slimScrollDiv" style="position:relative; overflow:hidden; width:auto; height:546px;">
-                <div class="sidebar-inner content-scroll" style="overflow:hidden; width:auto;height:546px;">
 
-                    <div class="logo-header"></div>
+<body class="layout-vertical">
+    <div class="page-wrapper">
+        <nav id="sidebar" class="sidebar-nav">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 412px;">
+                <div class="sidebar-inner content-scroll" style="overflow: hidden; width: auto; height: 412px;">
+
+                    <div class="logo-header">
+                        <img class="sidebarLogo" src="FastLaneLogo.JPG" />
+                    </div>
                     <ul class="metismenu" id="menu">
-                        <li class="nav-heading">
-                            <span>Dashboard</span>
-                        </li>
-                        <li class="active">
-                            <a href="javascript:void(0)">
-                                <i class="icon-home">
-                                </i>
-                                <span ui-sref="vehicleInfo" class="nav-text">Vehicle Info</span>
+                        <li>
+                            <a href="javascript:void(0)" aria-expanded="false">
+                                <span ui-sref="vehicleInfo" class="nav-text">Vehicle Status</span>
+                            </a>
+                        </li>                        
+                        <li>
+                            <a href="javascript:void(0)" aria-expanded="false">
+                                <span ui-sref="dropNGo" class="nav-text">Drop N Go</span>
                             </a>
                         </li>
                         <li>
@@ -34,7 +38,7 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div><div class="slimScrollBar" style="background: rgb(221, 221, 221); width: 4px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 205.75px;"></div><div class="slimScrollRail" style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
             </div>
         </nav>
             <header class="header">
@@ -71,5 +75,11 @@
     <script src="/Pedestrian_Safety/pedestrians.service.js"></script>
     <script src="Saftey/carInfoController.js"></script>
     <script src="Saftey/getCarService.js"></script>
+    <script src="DropNGo/DropNGo.js"></script>
+    <script type="text/javascript">
+        (function () {
+            angular.module('fastLaneApp', ['ui.router'])
+        })();
+    </script>
 </body>
 </html>
