@@ -18,7 +18,7 @@
                 url: '/pedestrians',
                 templateUrl: '/Pedestrian_Safety/pedestrian.view.html',
                 title: 'Pedestrian Safety',
-                controller: 'pedestrianController'
+                controller: 'pedestrianController as pedCtrl'
             });
     }
 })();
