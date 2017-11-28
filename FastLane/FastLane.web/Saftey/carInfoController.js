@@ -1,4 +1,27 @@
 ﻿(function () {
+    'use strict'
+    var app = angular.module('fastLaneApp')
+    app.config(_configureStates);
+    _configureStates.$inject = ['$stateProvider']
+
+    function _configureStates($stateProvider) {
+        $stateProvider
+            .state({
+                name: 'vehicleInfo',
+                component: 'vehicleInfoScreen',
+                url: '/vehicleInfo'
+            })
+    }
+
+    app.component('vehicleInfoScreen', {
+        templateUrl: 'Saftey/saftey.html',
+        controller: 'carInfoController',
+        controllerAs: 'cc'
+    })
+})();
+
+(function () {
+    'use strict'
     angular.module('fastLaneApp')
         .controller('carInfoController', carInfoController)
 
@@ -7,21 +30,19 @@
     function carInfoController(getCarService) {
         var vm = this;
         vm.carInfoArray = []
-        //vm.$onInit = onInit
-        vm.tireBtn = _tireBtn
+        vm.$onInit = onInit
 
-        function _tireBtn() {
-            getCarService.getTireInfo().then(display)
-        }
-
-        //function onInit() {
-        //    getCarService.getTireInfo().then(display)
+        //function _tireBtn() {
+        //    getCarService.getCarInfo().then(display)
         //}
+
+        function onInit() {
+            getCarService.getCarInfo().then(display)
+        }
 
         function display(response) {
             console.log(response)
             vm.carInfoArray = response
-            console.log(vm.carInfoArray.tires[0].location)
         }
     }
 })();
