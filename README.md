@@ -13,3 +13,5 @@ Contributors
 - Baltasar Lizano
 
 - Nick Friend - ahoy ahoy
+
+- Juan Flores
